@@ -24,4 +24,5 @@ public class ColaboradorController {
     public Colaborador salvarColaborador(@RequestBody Colaborador colaborador){
         return colaboradorService.salvarColaborador(colaborador);
     }
+
 }

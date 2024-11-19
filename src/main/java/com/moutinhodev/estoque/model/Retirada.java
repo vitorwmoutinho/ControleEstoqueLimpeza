@@ -5,9 +5,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;
 
+
 @Entity
-@Data
 public class Retirada {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,6 +27,7 @@ public class Retirada {
     @Column(nullable = false)
     private LocalDateTime dataHora;
 
+    // Getters e Setters
     public Long getId() {
         return id;
     }
