@@ -14,16 +14,18 @@ public class MaterialController {
     @Autowired
     private MaterialService materialService;
 
-    public List<Material> listarMateriais(){
+    @GetMapping
+    public List<Material> listarMateriais() {
         return materialService.listarMateriais();
     }
 
-    public Material salvarMaterial(@RequestBody Material material){
+    @PostMapping
+    public Material salvarMaterial(@RequestBody Material material) {
         return materialService.salvarMaterial(material);
     }
 
     @DeleteMapping("/{id}")
-    public void deletarMaterial(@PathVariable Long id){
+    public void deletarMaterial(@PathVariable Long id) {
         materialService.deletarMaterial(id);
     }
 
